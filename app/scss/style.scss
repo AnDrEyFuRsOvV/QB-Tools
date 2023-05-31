@@ -4,3 +4,82 @@
 @import 'libs';
 @import 'global';
 
+// STYLE FOR HEADER
+.header{
+    &__change-lang-desktop {
+        background-color: #000;
+        height: 33px;
+        text-align: right;
+        vertical-align: center;
+        padding: 6px;
+        position: relative;
+    }
+    &__wrapper{
+        position: relative;
+    }
+    &__arrow-bottom{
+        z-index: 10;
+        position: absolute;
+        right: 60px;
+        top: 7px;
+    }
+    &__lang{
+        width: 40px;
+        z-index: 20;
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        margin-right: 60px;
+        outline: none;
+        font-size: 16px;
+        line-height: 20px;
+        @extend%m-600;
+        appearance: none;
+        cursor: pointer;
+        position: relative;
+    }
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 60px;
+        align-items: center;
+        background: #F3F3F3;
+        border-radius: 0px 0px 30px 30px;
+        max-height: 80px;
+    }
+    &__menu {
+        display: flex;
+        align-items: center;
+    }
+    &__menu-link {
+        display: block;
+    }
+    &__menu-item{
+        margin-right: 30px;
+        &:first-child{
+            margin-right: 0;
+        }
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    &__logo {
+        margin-right: 91px;
+    }
+    &__dropdown {
+        display: none;
+    }
+    &__dropdown-item {
+        display: none;
+    }
+    &__btn-link {
+        display: block;
+    }
+}
+
+// STYLE FOR HEADER END
+
+
+@import 'media';
