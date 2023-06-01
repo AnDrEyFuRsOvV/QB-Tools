@@ -77,6 +77,15 @@
     &__btn-link {
         display: block;
     }
+    &__dropdown-title{
+        position: relative;
+        width: 90px;
+    }
+    &__dropdown-img{
+        position: absolute;
+        top: 8px;
+        right: 1px;
+    }
 }
 
 // STYLE FOR HEADER END
