@@ -13,3 +13,15 @@ $(document).ready(function () {
     $(".header__selected-img").removeClass("rotate");
   });
 });
+
+$(document).ready(function () {
+  // Add submit event listener to the form
+  $(".top__form").submit(function (event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Perform your desired actions here
+
+    // Optionally, you can manually submit the form using jQuery if needed
+    // $(this).submit();
+  });
+});

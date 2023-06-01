@@ -212,12 +212,136 @@
 
 
 .top{
-    height: 100vh;
-    width: 100%;
     background-image: url(../images/bg-top.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    &__inner {
+        padding-top: 60px;
+        display: flex;
+        align-items: center;
+        margin-left: 60px;
+    }
+    &__box {
+        margin-right: 15px;
+        max-width: 570px;
+        padding-bottom: 45px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    &__title {
+        @extend%m-700;
+        font-size: 42px;
+        line-height: 51px;
+        text-transform: uppercase;
+        color: #FF5100;
+    }
+    &__subtitle {
+        font-size: 24px;
+        line-height: 29px;
+        @extend%m-600;
+        color: #FF5100;
+        margin-bottom: 20px;
+    }
+    &__description {
+        @extend%m-500;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000000;
+        margin-bottom: 35px;
+    }
+    &__bold {
+        @extend%m-700;
+    }
+    &__form {
+        position: relative;
+    }
+    &__span {
+        position: absolute;
+        top: 25px;
+        left: 20px;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000000;
+        @extend%m-400;
+    }
+    &__input {
+        margin: 0;
+        padding: 0;
+        border: none;
+        outline: none;
+        background-color: #F3F3F3;
+        border-radius: 15px;
+        padding: 25px 255px 25px 69px ;
+        width: 439px;
+        transition: all .3s;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000000;
+        @extend%m-400;
+        cursor: text;
+        &:hover{
+            background: #FFFFFF;
+            outline: 1px solid #FF5100;
+        }
+        &:focus{
+            background: #FFFFFF;
+            outline: 1px solid #FF5100;
+            caret-color: #FF5100;
+        }
+    }
+    &__btn {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        border: none;
+        outline: none;
+        top: 10px;
+        cursor: pointer;
+        right: 152px;
+        background-color: #FF5100;
+        border-radius: 10px;
+        @extend%m-700;
+        color: #FFFFFF;
+        font-size: 16px;
+        padding: 15px 20px;
+        line-height: 20px;
+        transition: all .3s;
+        &:hover{
+            background-color: #ED5108;
+        }
+        &:active{
+            background-color: #FF5100;
+        }
+    }
+    &__form-descr {
+        @extend%m-500;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000000;
+        margin-top: 10px;
+    }
+    &__img {
+    }
 }
+
+.cards{
+    background: #F3F3F3;
+    backdrop-filter: blur(150px);
+    height: 100vh;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @import 'media';
