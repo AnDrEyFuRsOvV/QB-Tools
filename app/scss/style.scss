@@ -6,13 +6,69 @@
 
 // STYLE FOR HEADER
 .header{
+    position: relative;
+    &__inner{
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+    }
     &__change-lang-desktop {
         background-color: #000;
         height: 33px;
-        text-align: right;
         vertical-align: center;
         padding: 6px;
         position: relative;
+        display: flex;
+        justify-content: end;
+    }
+    &__container{
+        max-width: 1290px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: end;
+        // align-items: center;
+        width: 100%;
+    }
+    &__lang{
+        color: #fff;
+        width: 42px;
+        margin-right: 60px;
+        position: relative;
+        cursor: pointer;
+    }
+    &__selected-img{
+        position: absolute;
+        top: 7px;
+        right: 1px;
+    }
+    &__selected-item{
+        margin-left: 2px;
+        @extend%m-600;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    &__lang-list{
+        &.open{
+            display: block;
+        }
+        margin-top: 5px;
+        display: none;
+        border-radius: 5px;
+        background: #F3F3F3;
+        box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.25);
+        color: #000;
+        text-align: center;
+        width: 45px;
+    }
+    &__lang-item{
+        padding: 5px;
+        font-size: 16px;
+        line-height: 20px;
+        @extend%m-600;
+        transition: all .3s;
+        &:hover{
+            background-color: gray;
+        }
     }
     &__wrapper{
         position: relative;
@@ -22,24 +78,13 @@
         position: absolute;
         right: 60px;
         top: 7px;
+        transition: all .3s;
+        transform: rotate(0deg);
+        &.open{
+            transform: rotate(180deg);
+        }
     }
-    &__lang{
-        width: 40px;
-        z-index: 20;
-        padding: 0;
-        margin: 0;
-        background-color: transparent;
-        border: none;
-        color: #fff;
-        margin-right: 60px;
-        outline: none;
-        font-size: 16px;
-        line-height: 20px;
-        @extend%m-600;
-        appearance: none;
-        cursor: pointer;
-        position: relative;
-    }
+    
     &__nav {
         display: flex;
         justify-content: space-between;
@@ -55,8 +100,18 @@
     }
     &__menu-link {
         display: block;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000000;
+        @extend%m-500;
+        transition: all .3s;
+        cursor: pointer;
+        &:hover{
+            color: #FF5100;
+        }
     }
     &__menu-item{
+        position: relative;
         margin-right: 30px;
         &:first-child{
             margin-right: 0;
@@ -67,19 +122,84 @@
     }
     &__logo {
         margin-right: 91px;
+        transition: transform 0.3s;
+        &:hover{
+            transform: scale(1.1);
+        }
     }
     &__dropdown {
         display: none;
+        padding: 30px !important;
+        background: #F3F3F3;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.18);
+        border-radius: 20px;
+        position: absolute;
+        top: 40px;
     }
     &__dropdown-item {
         display: none;
+        width: 379px;
+        color: #000000;
+        cursor: pointer;
+        transition: all .3s;
+        padding: 10px;
+        font-size: 16px;
+        line-height: 37px;
+        @extend%m-500;
+        position: relative;
+        &::after{
+            content: url(../images/arrow-o.svg);
+            position: absolute;
+            top: 11px;
+            right: 10px;
+        }
+        &.active{
+            &::after{
+                content: url(../images/arrow-w.svg);
+            }
+            @extend%m-700;
+            color: #fff;
+            background-color: #FF5100;
+            border-radius: 10px;
+            &:hover{
+                color: #fff;
+            }
+        }
+        &:hover{
+            color: #FF5100;
+        }
     }
     &__btn-link {
         display: block;
+        cursor: pointer;
+        @extend%m-700;
+        line-height: 20px;
+        font-size: 16px;
+        color: #E64900;
+        background-color: #FEB897;
+        border-radius: 10px;
+        transition: all .3s;
+        padding: 15px 36px;
+        &:hover{
+            color: #fff;
+            background-color: #FF5100;
+        }
+        &:active{
+            background-color: #ED5108;
+        }
     }
     &__dropdown-title{
         position: relative;
         width: 90px;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000000;
+        @extend%m-500;
+        transition: all .3s;
+        cursor: pointer;
+        &:hover{
+            color: #FF5100;
+        }
     }
     &__dropdown-img{
         position: absolute;
@@ -90,5 +210,14 @@
 
 // STYLE FOR HEADER END
 
+
+.top{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../images/bg-top.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
 @import 'media';

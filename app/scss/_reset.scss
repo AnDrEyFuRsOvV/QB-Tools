@@ -11,6 +11,12 @@ html{
 ul[class],
 ol[class] {
   padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+ul{
+  text-decoration: none;
+  list-style-type: none;
 }
 
 body,
