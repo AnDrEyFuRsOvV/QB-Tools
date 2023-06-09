@@ -105,3 +105,8 @@ $(".partners__inner-2").slick({
     },
   ],
 });
+
+const input = document.getElementById("myInput");
+const placeholder = input.getAttribute("placeholder");
+const lastChar = placeholder.charAt(placeholder.length - 1);
+document.querySelector(".last-char").textContent = lastChar;

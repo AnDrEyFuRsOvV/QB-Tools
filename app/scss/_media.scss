@@ -65,7 +65,7 @@
     .header__inner{
     }
     .header__burger{
-        padding-left: 20px;
+        margin-left: 20px;
         cursor: pointer;
         display: block;
     }
@@ -167,6 +167,8 @@
     }
     .top__form-descr.mobile{
         display: block;
+        font-size: 12px;
+        text-align: left;
     }
     .top__btn{
         margin-top: 10px;
