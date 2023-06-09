@@ -1,27 +1,107 @@
 $(document).ready(function () {
-  // Toggle dropdown visibility and update selected item
-  $(".header__lang").click(function () {
-    $(".header__lang-list").toggleClass("open");
-    $(".header__selected-img").toggleClass("rotate");
+  $(".top__form").submit(function (event) {
+    event.preventDefault();
+  });
+  $(".contact__form").submit(function (event) {
+    event.preventDefault();
   });
 
-  // Close dropdown and update selected item
-  $(".header__lang-item").click(function () {
-    var selectedItem = $(this).text();
-    $(".header__selected-item").text(selectedItem);
-    $(".header__lang-list").removeClass("open");
-    $(".header__selected-img").removeClass("rotate");
+  $(".top__input").focus(function () {
+    $(".top__span").addClass("span-focused");
   });
+
+  $(".top__input").blur(function () {
+    $(".top__span").removeClass("span-focused");
+  });
+
+  function select() {
+    $(".select__header").click(selectToggle);
+    $(".select__item").click(selectChoose);
+  }
+
+  function selectToggle() {
+    $(this).parent().toggleClass("active");
+  }
+
+  function selectChoose() {
+    const text = $(this).text();
+    const select = $(this).closest(".select");
+    const curentText = select.find(".select__curent");
+    curentText.text(text);
+    select.removeClass("active");
+  }
+
+  $(".header__burger").click(function () {
+    $(this).toggleClass("disabled");
+    $(".header__burger-body").toggleClass("active");
+    $(".main").toggleClass("menu-open");
+    $(".footer").toggleClass("menu-open");
+    $(".header__inner").toggleClass("menu"); // Добавление класса "menu" к .header__inner
+    $(".wrapper").toggleClass("menu-open"); // Добавление класса "menu" к .header__inner
+  });
+
+  $(".header__burger-acordeon").click(function () {
+    const index = $(".header__burger-acordeon").index(this);
+    $(this).toggleClass("open");
+    $(".header__burger-img-arrow").eq(index).toggleClass("open");
+  });
+
+  $(document).ready(function () {
+    $(".top__input").on("input", function () {
+      this.value = this.value.substr(0, 9);
+    });
+  });
+
+  select();
 });
 
-$(document).ready(function () {
-  // Add submit event listener to the form
-  $(".top__form").submit(function (event) {
-    event.preventDefault(); // Prevent form submission
+$(".partners__inner").slick({
+  responsive: [
+    {
+      breakpoint: 2048,
+      settings: "unslick",
+    },
+    {
+      breakpoint: 710,
+      settings: {
+        infinite: true,
+        centerMode: true,
+        variableWidth: true,
+        mobileFirst: true,
+        mobileMaxWidth: 710,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 200, // Увеличьте значение для более длительной задержки между слайдами
+        speed: 2000, // Увеличьте значение для более плавной анимации
+        easing: "linear", // Попробуйте другие функции анимации, например "easeInOutCubic", "easeInOutQuart", etc.
+        pauseOnHover: false,
+      },
+    },
+  ],
+});
 
-    // Perform your desired actions here
-
-    // Optionally, you can manually submit the form using jQuery if needed
-    // $(this).submit();
-  });
+$(".partners__inner-2").slick({
+  responsive: [
+    {
+      breakpoint: 2048,
+      settings: "unslick",
+    },
+    {
+      breakpoint: 710,
+      settings: {
+        infinite: true,
+        centerMode: true,
+        variableWidth: true,
+        mobileFirst: true,
+        mobileMaxWidth: 710,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 200, // Увеличьте значение для более длительной задержки между слайдами
+        speed: 2000, // Увеличьте значение для более плавной анимации
+        easing: "linear", // Попробуйте другие функции анимации, например "easeInOutCubic", "easeInOutQuart", etc.
+        pauseOnHover: false,
+        rtl: true,
+      },
+    },
+  ],
 });
