@@ -62,16 +62,17 @@ function styles() {
     .pipe(browserSync.stream());
 }
 
+function buildHTML() {
+  return src("app/*.html").pipe(dest("dist"));
+}
+
 function build() {
   return src(
-    [
-      "app/css/style.min.css",
-      "app/fonts/**/*",
-      "app/js/main.min.js",
-      "app/*.html",
-    ],
+    ["app/css/style.min.css", "app/fonts/**/*", "app/js/main.min.js"],
     { base: "app" }
-  ).pipe(dest("dist"));
+  )
+    .pipe(dest("dist"))
+    .pipe(buildHTML());
 }
 
 function watching() {
