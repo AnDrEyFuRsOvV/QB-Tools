@@ -991,7 +991,142 @@
 
 
 
+.table {
+    &__inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    &__header {
+        display: flex;
+        align-items: center;
+        border-top: 1px solid #898989;
+        border-bottom: 1px solid #898989;
+        border-right: 1px solid #898989;
+        height: 131.35px;
+    }
+    &__row-title {
+        width: 515px;
+        border-right: 1px solid #898989;
+        height: 131.35px;
+    }
+    &__row-title-text {
+        margin-top: 51.18px;
+        margin-left: 15px;
+        font-size: 24px;
+        line-height: 29px;
+        color: #000000;
+        @extend%m-600;
+    }
+    &__row-checkmark {
+        text-align: center;
+        width: 218.33px;
+        border-right: 1px solid #898989;
+        height: 131.35px;
+        &:last-child{
+            border: none;
+        }
+        &:nth-child(3){
+            position: relative;
+            &::before{
+                content: url(../images/smile.png);
+                position: absolute;
+                top: -40px;
+                left: -4px;
+            }
+        }
+    }
+    &__checkmark-title {
+        @extend%m-700;
+        font-size: 24px;
+        line-height: 29px;
+        color: #000000;
+        margin: 15px 0 12px 0;
+    }
+    &__checkmark-price-month {
+        @extend%m-700;
+        font-size: 24px;
+        line-height: 29px;
+        color: #FF5100;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+    }
+    &__checkmark-price-year {
+        @extend%m-700;
+        font-size: 21px;
+        line-height: 26px;
+        text-transform: uppercase;
+        color: #898989;
+    }
+    &__body {
+        border-bottom: 1px solid #898989;
+        border-right: 1px solid #898989;
+        height: 100%;
+    }
+    &__col {
+        display: flex;
+        align-items: center;
+        &:nth-child(6){
+            position: relative;
+            &::before{
+                position: absolute;
+                content: url(../images/like-hand.png);
+                top: -5px;
+                left: -100px;
+            }
+        }
+    }
+    &__col-title {
+        @extend%m-600;
+        width: 515px;
+        padding: 15px;
+        border-right: 1px solid #898989;
+        font-size: 20px;
+        line-height: 34px;
+        color: #000000;
+    }
+    &__col-checkmark {
+        width: 218.33px;
+        text-align: center;
+        border-right: 1px solid #898989;
+        flex-grow: 1;
+        &:last-child{
+            border: none;
+        }
+    }
+}
 
+.sale{
+    @extend%m-700;
+    color: #fff;
+    font-size: 13.6216px;
+    line-height: 17px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5.68px;
+    background-color: #FF5100;
+    border-radius: 5.67568px;
+}
+.span{
+    @extend%m-700;
+    text-transform: initial;
+    font-size: 16px;
+    line-height: 27px;
+}
+
+
+
+
+
+
+
+
+
+
+.checkmark-img {
+}
 
 
 
