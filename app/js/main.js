@@ -1,3 +1,22 @@
+$(".table-mobile__inner").slick({
+  responsive: [
+    {
+      breakpoint: 9048,
+      settings: "unslick",
+    },
+    {
+      breakpoint: 800,
+      settings: {
+        arrows: false,
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: false,
+      },
+    },
+  ],
+});
+
 $(document).ready(function () {
   $(".top__form").submit(function (event) {
     event.preventDefault();
@@ -58,7 +77,7 @@ $(document).ready(function () {
 $(".partners__inner").slick({
   responsive: [
     {
-      breakpoint: 2048,
+      breakpoint: 9048,
       settings: "unslick",
     },
     {
@@ -83,7 +102,7 @@ $(".partners__inner").slick({
 $(".partners__inner-2").slick({
   responsive: [
     {
-      breakpoint: 2048,
+      breakpoint: 9048,
       settings: "unslick",
     },
     {

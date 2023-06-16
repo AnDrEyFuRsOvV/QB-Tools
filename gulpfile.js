@@ -1,5 +1,4 @@
 const { src, dest, watch, parallel, series } = require("gulp");
-
 const scss = require("gulp-sass")(require("sass"));
 const concat = require("gulp-concat");
 const browserSync = require("browser-sync").create();
@@ -50,7 +49,7 @@ function scripts() {
 
 function styles() {
   return src("app/scss/style.scss")
-    .pipe(scss({ outputStyle: "compressed" }))
+    .pipe(scss({ outputStyle: "compressed" }).on("error", scss.logError))
     .pipe(concat("style.min.css"))
     .pipe(
       autoprefixer({
@@ -71,8 +70,9 @@ function build() {
     ["app/css/style.min.css", "app/fonts/**/*", "app/js/main.min.js"],
     { base: "app" }
   )
+    .pipe(buildHTML())
     .pipe(dest("dist"))
-    .pipe(buildHTML());
+    .pipe(browserSync.reload({ stream: true })); // Изменение в этой строке
 }
 
 function watching() {
@@ -88,5 +88,5 @@ exports.scripts = scripts;
 exports.images = images;
 exports.cleanDist = cleanDist;
 
-exports.build = series(cleanDist, images, build);
+exports.build = series(cleanDist, images, buildHTML, build);
 exports.default = parallel(styles, scripts, browsersync, watching);
