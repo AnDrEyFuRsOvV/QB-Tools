@@ -7,7 +7,6 @@
 
 
 
-
 .header{
     position: relative;
     &__inner{
@@ -1778,7 +1777,7 @@
     }
     position: absolute;
     top: -20px;
-    left: 50px;
+    left: 0px;
 }
 .steps__absolute-img-2{
     & img{
@@ -1787,12 +1786,14 @@
     }
     position: absolute;
     top: 19px;
-    right: 50px;
+    right: 0px;
 }
 
 
 
 .downoload {
+    margin-top: 190px;
+    margin-bottom: 100px;
     &__inner {
         background-image: url(/images/bg-downoload.png);
         background-size: cover;
@@ -1833,12 +1834,166 @@
 
 
 
-
+.opportunities__main-btn.mobile{
+    display: none;
+}
 
 
 .opportunities.revers{
+    margin-top: 30px;
     .opportunities__items{
         flex-direction: row-reverse
+    }
+    .opportunities__teext-box{
+        border-radius: 0;
+        box-shadow: none; 
+        background-color: transparent;
+        padding: 0;
+    }
+    .opportunities__main-title{
+        margin-bottom: 15px;
+        max-width: 570px
+    }
+    .opportunities__item{
+        margin-left: 30px;
+    }
+}
+
+.steps.code{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
+.integrations {
+    margin-top: 100px;
+    margin-bottom: 45px;
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(109px, 1fr));
+        grid-gap: 30px;
+    }
+    &__title{
+        text-align: center;
+        font-size: 34px;
+        line-height: 41px;
+        text-transform: uppercase;
+        color: #FF5100;
+        @extend%m-700;
+        margin-bottom: 30px;
+    }
+    &__item {
+        width: 100%;
+        max-width: 370px;
+        & img{
+            width: 100%;
+            height: auto;
+            max-width: 370px;
+            max-height: 370px;
+            box-shadow: 0px 29px 33px rgba(85, 105, 107, 0.1);
+            border-radius: 60px;
+        }
+    }
+}
+
+.oportunities__bottom-title {
+    font-size: 24px;
+    line-height: 29px;
+    color: #FF5100;
+    @extend%m-700;
+    margin-bottom: 10px;
+}
+.oportunities__bottom-subtitle {
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    @extend%m-500;
+    margin-bottom: 3px;
+}
+.oportunities__bottom-title-descr {
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    @extend%m-400;
+}
+
+
+
+.opportunities.revers.marketing,
+.opportunities.revers.qb-tools{
+    margin-top: 0;
+    .opportunities__items{
+        flex-direction: row-reverse
+    }
+    .opportunities__teext-box{
+        background-color: #FFFFFF;
+        box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.28);
+        border-radius: 30px;
+        padding: 30px;
+    }
+    h4.opportunities__title{
+        margin-bottom: 30px;
+    }
+}
+
+.opportunities.marketing{
+    h4.opportunities__title{
+        margin-bottom: 30px;
+    }
+    .opportunities__img-content{
+        margin-left: 21px;
+        margin-top: 10px;
+    }
+}
+
+.table.marketing{
+    .table__row-checkmark{
+        &:nth-child(2){
+            position: relative;
+            &::before{
+                display: none;
+            }
+        }
+    }
+    .table__col-title{
+        max-width: 784px;
+    }
+    .table__row-title{
+        width: 784px;
+    }
+    .table__row-checkmark{
+        width: 386px;
+    }
+    .table__col-checkmark{
+        min-width: 386px;
+    }
+}
+
+
+
+.table-mobile.marketing{
+    h5.table__checkmark-title{
+        margin-top: 30px;
+    }
+    .table-mobile__price{
+        margin-bottom: 15px;
+    }
+}
+
+.table__title{
+    font-size: 34px;
+    line-height: 41px;
+    text-transform: uppercase;
+    color: #FF5100;
+    @extend%m-700;
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+
+.seo{
+    &__inner{
+        
     }
 }
 

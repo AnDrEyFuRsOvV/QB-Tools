@@ -1028,10 +1028,133 @@
     }
 }
 
-@media(max-width: 1160px){
+@media(max-width: 1060px){
     .steps__absolute-img,
     .steps__absolute-img-2{
         display: none;
     }
+    .opportunities.revers{
+        .opportunities__items{
+            flex-direction: column;
+        }
+    }
+    .opportunities__main-btn{
+        display: none;
+    }
+    .opportunities__main-btn.mobile{
+        display: block;
+    }
 }
 
+@media(max-width: 450px){
+    .integrations__inner{
+        grid-gap: 8px;
+    }
+    .integrations__item {
+        width: 100%;
+        max-width: 370px;
+        & img{
+            width: 100%;
+            height: auto;
+            max-width: 370px;
+            max-height: 370px;
+            box-shadow: 0px 8.55128px 9.73077px rgba(85, 105, 107, 0.1);
+            border-radius: 17.6923px;
+        }
+    }
+}
+
+
+@media(max-width: 1200px){
+    .downoload__content{
+        margin-left: 76px;
+    }
+}
+
+@media(max-width: 1110px){
+    .downoload__content{
+        margin-left: 50px;
+    }
+}
+
+@media(max-width: 1100px){
+    .downoload__content{
+        margin-left: 0px;
+        width: 100%;
+        max-width: 570px;
+    }
+    .downoload__inner {
+        flex-direction: column-reverse;
+        height: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    .downoload__img img{
+        margin-top: 0;
+        width: 100%;
+        margin-bottom: -3px;
+    }
+    .downoload__content{
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+}
+
+
+@media (max-width: 1200px){
+    .steps__absolute-img, .steps__absolute-img-2 {
+        display: none;
+    }
+}
+
+@media (max-width: 600px){
+    .downoload__content{
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+    .downoload__title{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .downoload__descr{
+        font-size: 16px;
+        line-height: 27px;
+    }
+    .downoload__img img{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .downoload{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    h2.opportunities__main-title{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .opportunities.revers .opportunities__item{
+        margin-left: 0;
+    }
+    .integrations__title{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .integrations{
+        margin-top: 50px;
+        margin-bottom: 45px;
+    }
+}
+
+
+@media (max-width: 1260px){
+    .table__row-checkmark{
+        max-width: 386px!important;
+        width: 100%!important;
+    }
+    .table__col-checkmark{
+        max-width: 386px!important;
+        width: 100%!important;
+    }
+}
