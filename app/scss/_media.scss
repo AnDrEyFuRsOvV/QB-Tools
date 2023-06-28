@@ -4,7 +4,7 @@
         transition: all .3s;
         height: 1.5px;
         width: 28px;
-        background-color: #FF5100;
+        background-color: $orange-color;
         border-radius: 1000px;
         margin-bottom: 6.5px;
         &:last-child{
@@ -39,7 +39,7 @@
         .header__burger-line{
             width: 28px;
             height: 2px;
-            background-color: #929292;
+            background-color: $gray-2;
         }
     }
     .header__container{
@@ -63,8 +63,6 @@
             display: block;
         }
     }
-    .header__inner{
-    }
     .header__burger{
         margin-left: 20px;
         cursor: pointer;
@@ -74,7 +72,7 @@
         margin-right: 20px;
         display: block;
         & .select__curent{
-            color: #000;
+            color: $dark-color;
         }
     }
     .main.menu-open {
@@ -88,7 +86,7 @@
         opacity: 1;
         visibility: visible;
         transform: translateX(0);
-        background-color: #fff;
+        background-color: $white-color;
         position: absolute;
         top: 80px;
         right: 0;
@@ -119,6 +117,8 @@
 }
 // MEDIA FOR HEADER
 
+
+
 //STYLES FOR TOP
 @media(max-width: 1230px){
     .top__img{
@@ -129,14 +129,6 @@
         min-width: 100%;
     }
 }
-// @media(max-width: 1500px){
-//     .top.horeca .top__img{
-//         width: 100%;
-//     }
-//     .top.horeca .top__inner{
-//         padding-top: 120px;
-//     }
-// }
 @media(max-width: 1060px){
     .top__img{
         width: 100%;
@@ -193,7 +185,7 @@
         padding-bottom: 15px;
         &:focus{
             &::placeholder{
-                color: #fff; 
+                color: $white-color; 
             }
         }
     }
@@ -223,6 +215,7 @@
 }
 //STYLES FOR TOP
 
+
 //STYLES FOR cards
 @media(max-width: 1250px){
 }
@@ -235,8 +228,6 @@
         margin-left: 0;
         padding-top: 0;
     }
-    .cards__title{
-    }
 }
 @media(max-width: 600px){
     .cards__title{
@@ -246,6 +237,7 @@
     }
 }
 //STYLES FOR cards
+
 
 //STYLES FOR FOOTER
 @media(max-width: 1160px){
@@ -292,6 +284,8 @@
 }
 //STYLES FOR FOOTER
 
+
+//styles for partners
 @media(max-width: 1060px){
     .partners__background{
         display: none;
@@ -305,9 +299,6 @@
     .partners{
         background-image: none;
     }
-    .partners__inner{
-        // display: flex;
-    }
     .partners__title{
         font-size: 25px;
         line-height: 30px;
@@ -316,9 +307,6 @@
         display: block;
     }
 }
-
-
-
 @media(max-width: 1330px){
     .contact{
         justify-content: center;
@@ -328,7 +316,6 @@
         margin-left: 0;
     }
 }
-
 @media(max-width: 1160px){
     .contact{
         display: block;
@@ -361,7 +348,6 @@
         width: 100%;
     }
 }
-
 @media(max-width: 500px){
     .contact__title{
         font-size: 25px;
@@ -372,11 +358,9 @@
     }
     .contact__inner{
         margin-top: 0px;
+        margin-bottom: 50px;
     }
 }
-
-
-
 @media(max-width: 700px){
     .top__inner{
         padding-top: 85px;
@@ -391,15 +375,13 @@
     }
     .contact__inner{
         margin-top: 50px;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
     .partners__title{
         margin-bottom: 30px;
         text-align: left;
     }
 }
-
-
 @media(max-width: 1170px){
     .hear__img{
         display: none;
@@ -417,7 +399,6 @@
         padding-right: 0;
     }
 }
-
 @media(max-width: 1060px){
     .hear__inner{
         background-image: none;
@@ -425,7 +406,6 @@
         margin-bottom: 50px;
     }
 }
-
 @media(max-width: 600px){
     .hear__items{
         align-items: start;
@@ -459,13 +439,11 @@
         line-height: 27px;
     }
 }
-
 @media(max-width: 1160px){
     .steps__item::after{
         display: none;
     }
 }
-
 @media(max-width: 1060px){
     .steps{
         padding-bottom: 50px;
@@ -487,7 +465,6 @@
         margin-bottom: 15px;
     }
 }
-
 @media(max-width: 600px){
     .steps__inner{
         min-width: 345px;
@@ -501,7 +478,7 @@
         line-height: 20px;
     }
     .steps__title{
-        margin-bottom: 9px;
+        margin-bottom: 20px;
         font-size: 25px;
         line-height: 30px;
         text-align: center;
@@ -529,18 +506,11 @@
         }
     }
 }
-
 @media(max-width: 600px){
     .steps__inner{
         min-width: 200px;
     }
 }
-
-
-
-
-
-
 @media(max-width: 1260px){
     .table.feedback{
         .table__inner{
@@ -562,7 +532,6 @@
     }
     
 }
-
 @media(max-width: 1060px){
     .table{
         display: none;
@@ -578,9 +547,6 @@
     .table-mobile{
         display: block;
         margin-bottom: 50px;
-    }
-    .table-mobile.feedback{
-
     }
 }
 
@@ -814,11 +780,20 @@
 }
 
 @media(max-width: 500px){
+    .buisnes__img img{
+        margin-top: 0;
+    }
+    .steps__descr span{
+        font-size: 12px;
+    }
+    .buisnes__title{
+        margin-bottom: 10px;
+    }
     .buisnes__box{
         max-width: 370px;
         width: 300px;
         &:nth-child(2){
-            margin: 20px 0 20px auto;
+            margin: 20px 0 0px auto;
         }
     }
 }
@@ -873,7 +848,7 @@
         margin: 0;
     }
     .yes-no__box{
-        background: #F3F3F3;
+        background: $white-gray;
         border-radius: 15px;
         margin-bottom: 30px;
         margin-right: 0;
@@ -934,6 +909,8 @@
 @media(max-width: 650px){
     section.buisnes{
         padding-bottom: 50px;
+        padding-top: 50px;
+        background-image: none;
     }
     p.yes-no__p{
         font-weight: 500;
@@ -951,13 +928,27 @@
     img.yes-no__result{
         width: 100%;
     }
+    .yes-no__title{
+        font-size: 25px;
+        line-height: 30px;
+        margin: 0 auto;
+        width: 280px;
+    }
+    img.yes-no__item-img {
+        margin-top: 30px;
+    }
+    .opportunities__teext-box{
+        padding: 15px;
+    }
 }
 
 
 @media(max-width: 1060px){
-    
+    .top.marketing .top__inner {
+        padding-top: 90px;
+    }
     .opportunities__items{
-        flex-direction: column;
+        flex-direction: column!important;
         align-items: center;
     }
     .opportunities__teext-box{
@@ -972,9 +963,46 @@
     }
 }
 @media(max-width: 600px){
+    .opportunities__main-btn{
+        margin-top: 20px;
+    }
+    .opportunities.marketing .opportunities__img-content{
+        margin-left: 0;
+    }
+    .opportunities__bottom-subtitle{
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+    }
+    .opportunities__bottom-title-descr{
+        font-size: 12px;
+    }
+    .opportunities__bottom-title{
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .opportunities__inner{
+        margin-bottom: 50px;
+    }
+    h4.opportunities__title{
+        margin-bottom: 20px!important;
+    }
+    .opportunities__teext-box{
+        padding: 15px!important;
+    }
     h4.opportunities__title{
         font-size: 25px;
-        line-height: 30px;
+        line-height: 29px;
+    }
+    .opportunities__descr{
+        line-height: 22px;
+    }
+    h4.qr-code__title{
+        font-size: 25px;
+        line-height: 29px;
+    }
+    p.qr-code__descr{
+        font-size: 16px;
     }
 }
 
@@ -1156,5 +1184,112 @@
     .table__col-checkmark{
         max-width: 386px!important;
         width: 100%!important;
+    }
+}
+
+
+
+@media (max-width: 1180px){
+    .top.brend{
+        .top__content-absolute{
+            margin-top: 15px;
+            position: relative;
+            transform: rotate(0);
+            display: block;
+            top: 0;
+            right: 0;
+            font-size: 20px;
+            margin-bottom: 15px;
+            box-shadow: none;
+        }
+        p.top__description{
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (max-width: 1130px){
+    .top.brend{
+        .top__content-absolute{
+            margin: 15px auto;
+        }
+        .top__inner{
+            flex-direction: column;
+        }
+        .top__form {
+            display: none;
+        }
+        .top__form.mobile{
+            display: flex;
+        }
+        h2.top__title{
+            font-size: 26px;
+            line-height: 31px;
+            margin-bottom: 15px;
+        }
+        img.top__img{
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@media (max-width: 1060px){
+    
+    .description-card__inner{
+        flex-direction: column;
+        align-items: center;
+    }
+    .description-card__card{
+        margin-left: 0;
+        margin-top: 50px;
+        &:first-child{
+            margin-top: 0;
+        }
+    }
+    section.description-card{
+        margin-bottom: 50px;
+    }
+    .opportunities.revers.qb-tools img.opportunities__img{
+        margin-right: 0;
+    }
+    .opportunities.qb-tools img.opportunities__img{
+        margin-left: 0;
+    }
+    .top.qb-tools .top__inner {
+        padding-top: 89px;
+    }
+}
+
+@media (max-width: 600px){
+    .description-card__title{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .description-card__descr{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .description-card__content{
+        padding: 15px 15px 20px 15px;
+    }
+    .description-card__img{
+        margin-top: 0;
+    }
+    .partners.qb-tools{
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 1200px){
+    .qr-code__btn-app{
+        display: none;
+    }
+    .qr-code__btn-app.mobile{
+        display: inline-block;
+    }
+}
+@media (max-width: 1220px){
+    .opportunities.qb-tools img.opportunities__img{
+        margin-left: 12px;
     }
 }
