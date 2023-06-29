@@ -1234,7 +1234,10 @@
 }
 
 @media (max-width: 1060px){
-    
+    .bg-image-yes,
+    bg-image-yes-no{
+        display: none;
+    }
     .description-card__inner{
         flex-direction: column;
         align-items: center;
@@ -1258,6 +1261,84 @@
     .top.qb-tools .top__inner {
         padding-top: 89px;
     }
+    .text__inner{
+        flex-direction: column;
+
+    }
+    .text__box{
+        padding: 0;
+        background-color: transparent;
+        box-shadow: none;
+        margin-top: 20px;
+    }
+    .text__box-descr{
+        font-weight: 700;
+        text-align: center;
+    }
+    .text__title{
+        text-align: center;
+    }
+    .coulumn__inner{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .coulumn__item{
+        margin-bottom: 20px;
+    }
+    .mult__inner{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .info__blok{
+        display: none;
+    }
+    .info__content{
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .info__content-box{
+        padding: 0;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+    .info__box-title{
+        max-width: 345px;
+        width: 100%;
+    }
+    .info__content-descr{
+        max-width: 345px;
+        width: 100%;
+    }
+    .top.brend .top__inner {
+        padding-top: 94px;
+    }
+    .items__box{
+        &:nth-child(2){
+            margin: 0;
+        }
+    }
+    .mission__item::before{
+        display: none;
+    }
+    .mission__inner{
+        flex-direction: column;
+        align-items: center;
+    }
+    .mission__box{
+        margin: 0 auto;
+        margin-bottom: 50px;
+        max-width: 570px;
+    }
+    img.mission__img{
+        margin-bottom: 50px;
+        width: 100%;
+    }
+    .mission__item{
+        margin-left: 0;
+    }
 }
 
 @media (max-width: 600px){
@@ -1278,6 +1359,26 @@
     .partners.qb-tools{
         padding-top: 0;
     }
+    .mission__box,
+    .mission__item{
+        padding: 15px;
+    }
+    .mission__box-title{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .mission__box-descr{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .mission__item-title{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .mission__item-descr{
+        font-size: 16px;
+        line-height: 20px;
+    }
 }
 
 @media (max-width: 1200px){
@@ -1291,5 +1392,118 @@
 @media (max-width: 1220px){
     .opportunities.qb-tools img.opportunities__img{
         margin-left: 12px;
+    }
+    .items__inner{
+        margin: 0 auto;
+        flex-wrap: wrap;
+        max-width: 600px;
+        width: 100%;
+    }
+    .items__box{
+        max-width: 270px;
+        width: 100%;
+    }
+    .mult__boxes::before,.mult__boxes::after{
+        display: none;
+    }
+    .coulumn__item{
+        margin-bottom: 50px;
+        margin-right: 0;
+    }
+}
+
+
+@media (max-width: 600px){
+    .info__box-title{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .info__content-descr{
+        font-size: 16px;
+    }
+    .info__content-box{
+        margin-bottom: 30px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    section.info{
+        margin-bottom: 50px;
+    }
+    .items__title{
+        font-size: 25px;
+    }
+    .items__box-title{
+        font-size: 14px;
+        height: 64px;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .items__box-descr{
+        font-size: 12px;
+    }
+    .items__box{
+        max-width: 168px;
+        width: 100%;
+        margin-bottom: 10px;
+        margin-right: 9px;
+    }
+    .items__img{
+        max-width: 168px;
+    }
+    .items__inner{
+        justify-content: center;
+    }
+    section.items{
+        margin-bottom: 50px;
+    }
+    .text__title{
+        font-size: 25px;
+        text-align: left;
+    }
+    .text__box-descr{
+        font-size: 20px;
+        text-align: left;
+        & span{
+            font-size: 20px;
+        }
+    }
+    .coulumn__text-box{
+        padding: 15px;
+    }
+    .coulumn__text-title{
+        margin-bottom: 0;
+        font-size: 25px;
+    }
+    .coulumn__text-descr{
+        font-size: 16px;
+    }
+    .coulumn__item{
+        margin-bottom: 50px;
+        margin-right: 0;
+    }
+    section.coulumn{
+        margin-bottom: 0px;
+    }
+    .mult__boxes{
+        margin-left: 0;
+        margin-top: 0;
+    }
+    section.mult{
+        margin-top: 0;
+    }
+    .mult__box{
+        padding: 15px;
+    }
+    .mult__title{
+        font-size: 25px;
+    }
+    .mult__descr{
+        font-size: 16px;
+    }
+    section.partners.brend{
+        padding-top: 0;
     }
 }
