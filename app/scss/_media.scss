@@ -511,26 +511,31 @@
         min-width: 200px;
     }
 }
-@media(max-width: 1260px){
+@media(max-width: 1220px){
     .table.feedback{
-        .table__inner{
-            margin-top: 0;
-            margin-bottom: 0;
-            max-width: 985.5px;
+        .table__row-title {
+            width: 450px;
+        }
+        .table__col-title{
+            max-width: 450px;
+        }
+        .table__row-checkmark {
+            width: 245px;
+        }
+        .table__col-checkmark {
+            width: 245px;
+        }
+        .table__inner {
+            max-width: 971px;
+        }
+        .table__buttons {
+            width: 432px;
+            margin-right: 30px;
+        }
+        .table__btn {
+            width: 187px;
         }
     }
-    .table__col-checkmark{
-        width: 220px!important;
-        min-width: 10px!important;
-    }
-    .table__row-checkmark{
-        width: 220px!important;
-        
-    }
-    .table__row-title{
-        width: 515px;
-    }
-    
 }
 @media(max-width: 1060px){
     .table{
@@ -1177,13 +1182,14 @@
 
 
 @media (max-width: 1260px){
-    .table__row-checkmark{
-        max-width: 386px!important;
-        width: 100%!important;
+    .table.marketing .table__col-title{
+        max-width: 600px;
     }
-    .table__col-checkmark{
-        max-width: 386px!important;
-        width: 100%!important;
+    .table.marketing .table__row-title{
+        width: 600px;
+    }
+    .table.marketing .table__inner {
+        max-width: 1017px
     }
 }
 
@@ -1390,6 +1396,16 @@
     }
 }
 @media (max-width: 1220px){
+    .table.brend .table__col-checkmark{
+        min-width: 180.27px;
+    }
+    .table.brend .table__row-checkmark{
+        width: 219.33px;
+    }
+
+
+
+
     .opportunities.qb-tools img.opportunities__img{
         margin-left: 12px;
     }

@@ -340,11 +340,10 @@
 }
 
 .top{
-    
-    // background-image: url(/images/bg/top-bg.png);
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: center;
+    background-image: url(/images/bg/top-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     &__img{
         max-width: 536px;
     }
@@ -1196,6 +1195,9 @@
         }
     }
     &.feedback{
+        .table__row-title{
+            width: 539px;
+        }
         .table__row-checkmark{
             &:nth-child(2){
                 position: relative;
@@ -1242,7 +1244,7 @@
             max-width: 784px;
         }
         .table__row-title{
-            width: 784px;
+            width: 754px;
         }
         .table__row-checkmark{
             width: 386px;
@@ -1265,7 +1267,6 @@
         text-align: center;
         margin-bottom: 38px;
     }
-
 }
 .sale{
     @include text-style($white-color, 13.6216px, 17px, 700);
@@ -1291,6 +1292,66 @@ p.table__checkmark-price-year{
 }
 .checkmark-img {
     max-width: 40px;
+}
+.table__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 500px;
+    margin-top: 15px;
+    margin-right: 65px;
+}
+.table__btn {
+    display: block;
+    @include standart-btn;
+    width: 187px;
+}
+.table__buttons-inner{
+    display: flex;
+    justify-content: end;
+}
+.table.marketing .table__row-checkmark{
+    height: 97px;
+}
+.table.marketing .table__row-checkmark{
+    height: 97px;
+}
+
+.table__buttons.marketing{
+    justify-content: end;
+    margin-right: 101px;
+}
+
+
+
+
+.table.brend{
+    display: none;
+    .table__row-title{
+        width: 541px;
+    }
+    .table__col-title{
+        max-width: 600px;
+    }
+    .table__col-checkmark{
+        min-width: 208px;
+    }
+    .table__col:nth-child(3) .table__col-checkmark{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .table__row-checkmark:nth-child(3)::before{
+        display: none;
+    }
+    .table__row-checkmark:nth-child(4)::before{
+        content: url(/images/table/smile.png);
+        position: absolute;
+        left: -32px;
+        top: -41px;
+    }
+    .table__row-checkmark:last-child{
+        position: relative;
+    }
 }
 // TABLE section
 
